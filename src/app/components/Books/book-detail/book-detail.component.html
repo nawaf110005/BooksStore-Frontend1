@@ -1,0 +1,15 @@
+<app-nav-bar></app-nav-bar>
+<div class="container_details">
+
+    <a><img [src]="book.img">
+        <h3> title: {{ book.title}} </h3>
+        <p> category: {{ book.category}} </p>
+        <p>author: {{ book.author}} </p>
+        <p>releaseDate: {{ book.releaseDate}} </p>
+        <p>price: {{ book.price}}.00SR </p>
+    </a>
+    
+    <a [routerLink]="['/order', book.id]">
+        <button class="btn btn-success pull-right">ORDER</button>
+    </a>
+</div>

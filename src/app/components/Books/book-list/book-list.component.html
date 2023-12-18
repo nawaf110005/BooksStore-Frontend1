@@ -1,0 +1,15 @@
+<!-- <app-add-book (bookCreatedEvent)="updateBookList()"></app-add-book> -->
+<h3>What's new</h3>
+<div class="book-list">
+    <div class="book-card card" *ngFor="let book of books">
+        <a [routerLink]= "['/books', book.id]">
+        <img [src]="book.img">
+        <h3> title: {{ book.title}} </h3>
+        <p> category: {{ book.category}} </p>
+        <p>author: {{ book.author}} </p>
+        <p>releaseDate: {{ book.releaseDate}} </p>
+        <p>price: {{ book.price}}.00SR </p>
+    </a>
+    </div>
+</div> 
+

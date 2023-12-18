@@ -1,0 +1,15 @@
+<app-nav-bar></app-nav-bar>
+<div class="order-list">
+    <div class="order-card card" *ngFor="let order of orders">
+        <a [routerLink]="['/orders', order.id]">
+            <img [src]="order.img">
+            <h3> orderId: {{ order.id}} </h3>
+            <p>pickupDate: {{ order.pickupDate}} </p>
+            <p>pickupAddress: {{ order.pickupAddress}} </p>
+            <p>paymentMethod: {{ order.paymentMethod}} </p>
+        </a>
+        <button (click)="deleteOrder(order)">DELETE</button>
+        <!-- <button (click)="">Edit</button> -->
+
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Edit Order</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <input placeholder="Pickup Date" [(ngModel)]="data.pickupDate" />
+  </mat-form-field>
+  <mat-form-field>
+    <input placeholder="Pickup Address" [(ngModel)]="data.pickupAddress" />
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button (click)="onSaveClick()">Save</button>
+</mat-dialog-actions>

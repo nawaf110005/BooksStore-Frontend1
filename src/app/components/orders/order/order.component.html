@@ -1,0 +1,20 @@
+<app-nav-bar></app-nav-bar>
+<p>Pickup Address</p>
+<select #pickUpAddress (change)="onSelected(pickUpAddress.value)">
+    <option default>First branch</option>
+    <option>2nd branch</option>
+    <option>3rd branch</option>
+</select>
+<p>Pickup Date</p>
+<input #pickUpDate type="date" (change)="dateOnChange(pickUpDate.value)" />
+<p>Payment Method</p>
+<!-- <input #paymentMethod type="text" (change)="paymentMethodOnChange(paymentMethod.value)" /> -->
+<select #paymentMethod (change)="paymentMethodOnChange(paymentMethod.value)">
+    <option default></option>
+  <option>Cash Only</option>
+    <!--   <option>3rd branch</option> -->
+</select>
+<br><br>
+<br>
+
+<button (click)="confirmOrder()">Confirm</button>

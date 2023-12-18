@@ -1,0 +1,15 @@
+<app-nav-bar></app-nav-bar>
+<!-- <h1>{{ selectedCategory }} :</h1> -->
+<div class="book-list">
+    <div class="book-card card" *ngFor="let book of books">
+        <a [routerLink]= "['/books', book.id]">
+        <img [src]="book.img">
+        <h3>title: {{ book.title}} </h3>
+        <p>category: {{ book.category}} </p>
+        <p>author: {{ book.author}} </p>
+        <p>releaseDate: {{ book.releaseDate}} </p>
+        <p>price:{{ book.price}} </p>
+    </a>
+    </div>
+</div> 
+
