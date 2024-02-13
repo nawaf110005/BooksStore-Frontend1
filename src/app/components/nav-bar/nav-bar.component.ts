@@ -24,5 +24,6 @@ export class NavBarComponent implements OnInit {
    // Redirect to login page
    this.router.navigate(['/login']);
   }
+  
 
 }

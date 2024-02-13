@@ -9,6 +9,9 @@ import { Order } from '../models/order.model';
   providedIn: 'root'
 })
 export class BooksService {
+  getData() {
+    throw new Error('Method not implemented.');
+  }
 
   readonly API_URL = 'http://localhost:5005/api';
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { BooksService } from 'src/app/services/books.service';
 // import { OrderService } from '../services/order.service'; // replace with your actual service
 
@@ -13,17 +14,27 @@ export class EditOrderComponent implements OnInit {
     pickupAddress: new FormControl(''),
     pickupDate: new FormControl(''),
   });
+  
+  id: any;
+  data: any;
 
-  constructor(private booksService: BooksService) { } // replace with your actual service
-
-  ngOnInit() {
-    // populate the form with the current values
-    // const order = this.booksService.getCurrentOrder(); 
-    // this.orderForm.setValue({
-    //   pickupAddress: order.pickupAddress,
-    //   pickupDate: order.pickupDate,
-    // });
+  constructor(private dataService: BooksService, private router: ActivatedRoute,) {
+    
+   } // replace with your actual service
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
+
+  // ngOnInit(): void {
+    
+  //   this.id = this.router.snapshot.paramMap.get('id');
+  //   this.getData();
+  // }
+  // getData() {
+  //   this.dataService.getData().subscribe(data => {
+  //     this.data = data.find(item => item.id === this.id);
+  //   });
+  // }
 
   onSubmit() {
     // update the order with the new values

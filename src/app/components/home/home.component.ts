@@ -8,13 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   name: string;
+  currentUser: any;
 
   constructor() { 
     this.name = 'John Doe';
   }
 
-  ngOnInit(): void {
-    this.name = JSON.parse(localStorage.getItem("currentUser") as string).name;
-  }
+ ngOnInit(): void {
+    // Retrieve the currentUser from localStorage
+    const storedCurrentUser = localStorage.getItem('currentUser');
 
+    if (storedCurrentUser) {
+      // Remove surrounding double quotes if they exist
+      this.currentUser = storedCurrentUser.replace(/^"(.*)"$/, '$1');
+    }
+  }
 }

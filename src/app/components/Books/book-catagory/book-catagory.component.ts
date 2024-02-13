@@ -10,7 +10,7 @@ export class BookCatagoryComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("hello world")
+    console.log("book catagory component loaded...")
   }
 
 }

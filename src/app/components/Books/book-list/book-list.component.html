@@ -4,11 +4,11 @@
     <div class="book-card card" *ngFor="let book of books">
         <a [routerLink]= "['/books', book.id]">
         <img [src]="book.img">
-        <h3> title: {{ book.title}} </h3>
-        <p> category: {{ book.category}} </p>
-        <p>author: {{ book.author}} </p>
-        <p>releaseDate: {{ book.releaseDate}} </p>
-        <p>price: {{ book.price}}.00SR </p>
+        <h3> Title: {{ book.title}} </h3>
+        <p>Category: {{ book.category}} </p>
+        <p>Author: {{ book.author}} </p>
+        <p>Release Date: {{ book.releaseDate}} </p>
+        <p>Price: {{ book.price}}.00SR </p>
     </a>
     </div>
 </div> 
